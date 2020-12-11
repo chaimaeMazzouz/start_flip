@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,600");
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  overflow: hidden;
+}
+.flip-card-3D-wrapper {
+  width: 80%;
+  height: 80%;
+  position: relative;
+  perspective: 900px;
+  margin: 0 auto;
+}
+#flip-card {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin: 50px auto;
+  position: absolute;
+  transition: all 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+.do-flip {
+  transform: rotateY(-180deg);
+}
+#flip-card-btn-turn-to-back,
+#flip-card-btn-turn-to-front {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 60px;
+  height: 50px;
+  background: white;
+  cursor: pointer;
+  visibility: hidden;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 0.7em;
+  padding: 0;
+  color: white;
+  background-color: #ccc;
+  border: white;
+}
+#flip-card .flip-card-front,
+#flip-card .flip-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  z-index: 2;
+  box-shadow: 5px 6px 32px 2px rgba(133, 133, 133, 0.71);
+}
+
+#flip-card .flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  margin: 0;
+  font-size: 100px;
+  font-family: "Luckiest Guy", cursive;
+  padding-bottom: 50px;
+  color: white;
+  text-shadow: 0 0.1em 20px rgb(27, 105, 252),
+    0.05em -0.03em 0 rgb(27, 105, 252), 0.05em 0.005em 0 rgb(27, 105, 252),
+    0em 0.08em 0 rgb(27, 105, 252), 0.05em 0.08em 0 rgb(27, 105, 252),
+    0px -0.03em 0 rgb(27, 105, 252), -0.03em -0.03em 0 rgb(27, 105, 252),
+    -0.03em 0.08em 0 rgb(27, 105, 252), -0.03em 0 0 rgb(27, 105, 252);
+}
+
+.buttons {
+  position: absolute;
+  align-items: center;
+  display: grid;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  height: 50%;
+  width: 100%;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  text-decoration: none;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 4vw;
+  border-radius: 0.5em;
+  border-bottom: 0.25em solid #0f5177;
+  transition: all 0.5s;
+  background-color: #3498db;
+}
+.button:hover {
+  background-color: #1e9feb;
+  border-bottom-width: 0;
+  margin-top: 0.2em;
+}
+.btn3 {
+  margin-top: -20%;
+  padding: 20px 40px;
+}
